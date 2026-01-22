@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Null</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #0a2f66;
+      color: #ffffff;
+      font-family: "MS Gothic", "Yu Gothic", monospace;
+    }
+
+    /* 走査線 */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.04),
+        rgba(255,255,255,0.04) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+      pointer-events: none;
+    }
+
+    .wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .symbol {
+      width: 180px;
+      height: 180px;
+      border: 2px solid white;
+      border-radius: 50%;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .symbol::before,
+    .symbol::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background: white;
+      transform: translateX(-50%);
+    }
+
+    .symbol::after {
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      transform: translateY(-50%);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 20px 0;
+      font-weight: normal;
+    }
+
+    .text {
+      font-size: 14px;
+      line-height: 2;
+      opacity: 0.9;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 30px;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="symbol"></div>
+
+  <h1>情報停止</h1>
+
+  <div class="text">
+    現在、このページでは<br>
+    この世に存在するための値が存在しません。<br><br>
+    値の存在が確認されるまで<br>
+    しばらくお待ちください。<br>
+    <a href="Null-Why.html">このページが表示される理由</a>
+  </div>
+
+  <div class="footer">
+    Null Signal / No Data Available
+  </div>
+
+</div>
+
+</body>
+</html>
