@@ -1,0 +1,103 @@
+/* ===== 全体 ===== */
+body {
+  font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", sans-serif;
+  margin: 20px;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.8;
+
+  /* 通常カーソル */
+  cursor: url("cursor-normal.png") 4 3, auto;
+}
+
+/* ===== 見出し ===== */
+h1 {
+  color: #1f4ea8;
+}
+
+h2 {
+  margin-top: 30px;
+  border-bottom: 2px solid #1f4ea8;
+  padding-bottom: 4px;
+}
+
+/* ===== 文章 ===== */
+p {
+  color: #333;
+}
+
+/* ===== リスト ===== */
+ul {
+  padding-left: 20px;
+}
+
+/* ===== リンク（基本） ===== */
+a {
+  position: relative;
+  color: #1f4ea8;
+  text-decoration: none;
+
+  /* アニメーション用 */
+  transition: transform 0.15s ease;
+}
+
+/* 下線アニメーション */
+a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: #1f4ea8;
+  transition: width 0.25s ease;
+}
+
+/* ===== ホバー時 ===== */
+a:hover {
+  /* カーソル変更 */
+  cursor: url("cursor-link.png") 4 3, pointer;
+
+  /* 横にちょい動く */
+  transform: translateX(2px);
+
+  /* 文字の明るさアップ（地味に効く） */
+  filter: brightness(1.1);
+}
+
+/* 下線を伸ばす */
+a:hover::after {
+  width: 100%;
+}
+
+/* ===== Wikipedia風ナビゲーションボックス ===== */
+.navbox {
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  margin: 30px 0;
+  font-size: 0.9em;
+}
+
+.navbox-title {
+  background: #eaecf0;
+  padding: 6px 10px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #a2a9b1;
+}
+
+.navbox-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.navbox-table th,
+.navbox-table td {
+  border: 1px solid #a2a9b1;
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.navbox-table th {
+  background: #f2f2f2;
+}
