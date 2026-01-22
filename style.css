@@ -69,3 +69,35 @@ a:hover {
 a:hover::after {
   width: 100%;
 }
+
+/* ===== Wikipedia風ナビゲーションボックス ===== */
+.navbox {
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  margin: 30px 0;
+  font-size: 0.9em;
+}
+
+.navbox-title {
+  background: #eaecf0;
+  padding: 6px 10px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #a2a9b1;
+}
+
+.navbox-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.navbox-table th,
+.navbox-table td {
+  border: 1px solid #a2a9b1;
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.navbox-table th {
+  background: #f2f2f2;
+}
